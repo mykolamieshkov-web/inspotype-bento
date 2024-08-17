@@ -1,0 +1,23 @@
+body {
+
+font-family: 'Neue Haas Unica';
+font-weight: normal;
+   font-style: normal;
+   color: var(--black-text);
+   font-size: 12px;
+   background-color: var(--white-color);
+
+
+
+}
+p, a {
+    @include fluid-text;
+ 
+}
+.content-wrapper {
+    @include content-container;
+}
+.transparet {
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+}

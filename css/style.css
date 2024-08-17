@@ -1,0 +1,553 @@
+@charset "UTF-8";
+/* Обнуление стилей */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:focus, a:active {
+  outline: none;
+}
+
+footer {
+  display: block;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+/* Типографика */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+p {
+  margin-block: 0;
+  --paragraphMarginBottom: 24px;
+}
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/* Формы */
+input, button, textarea {
+  font-family: inherit;
+}
+input:clear, button:clear, textarea:clear {
+  display: none;
+}
+
+button {
+  all: initial;
+}
+
+/* Списки */
+ul, ol {
+  padding-left: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+/* Дополнительные стили */
+body,
+blockquote,
+figure:where([class]) {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl:where([class]) {
+  margin-block: 0;
+}
+
+dd[class] {
+  margin-left: 0;
+}
+
+fieldset[class] {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+}
+
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+svg * {
+  transition-property: fill, stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("./font/ NeueHaasUnica-Black.eot");
+  src: local("./font/Neue Haas Unica Black"), local("NeueHaasUnica-Black"), url("./font/NeueHaasUnica-Black.eot?#iefix") format("embedded-opentype"), url("./font/NeueHaasUnica-Black.woff2") format("woff2"), url("./font/NeueHaasUnica-Black.woff") format("woff"), url("./font/NeueHaasUnica-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("./fontNeueHaasUnica-Medium.eot");
+  src: local("Neue Haas Unica Medium"), local("NeueHaasUnica-Medium"), url("./font/NeueHaasUnica-Medium.eot?#iefix") format("embedded-opentype"), url("./font/NeueHaasUnica-Medium.woff2") format("woff2"), url("./font/NeueHaasUnica-Medium.woff") format("woff"), url("./font/NeueHaasUnica-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("./font/NeueHaasUnica-BoldItalic.eot");
+  src: local("Neue Haas Unica Bold Italic"), local("NeueHaasUnica-BoldItalic"), url("./font/NeueHaasUnica-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./font/NeueHaasUnica-BoldItalic.woff2") format("woff2"), url("./font/NeueHaasUnica-BoldItalic.woff") format("woff"), url("./font/NeueHaasUnica-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("./font/NeueHaasUnica-ExtBlkIta.eot");
+  src: local("Neue Haas Unica ExtBlk Ita"), local("NeueHaasUnica-ExtBlkIta"), url("./font/NeueHaasUnica-ExtBlkIta.eot?#iefix") format("embedded-opentype"), url("./font/NeueHaasUnica-ExtBlkIta.woff2") format("woff2"), url("./font/NeueHaasUnica-ExtBlkIta.woff") format("woff"), url("./font/NeueHaasUnica-ExtBlkIta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-ExtraBold.eot");
+  src: local("Neue Haas Unica Extra Bold"), local("NeueHaasUnica-ExtraBold"), url("NeueHaasUnica-ExtraBold.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-ExtraBold.woff2") format("woff2"), url("NeueHaasUnica-ExtraBold.woff") format("woff"), url("NeueHaasUnica-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-MediumItalic.eot");
+  src: local("Neue Haas Unica Medium Italic"), local("NeueHaasUnica-MediumItalic"), url("NeueHaasUnica-MediumItalic.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-MediumItalic.woff2") format("woff2"), url("NeueHaasUnica-MediumItalic.woff") format("woff"), url("NeueHaasUnica-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-ExtraBoldItalic.eot");
+  src: local("Neue Haas Unica ExtBd Ita"), local("NeueHaasUnica-ExtraBoldItalic"), url("NeueHaasUnica-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-ExtraBoldItalic.woff2") format("woff2"), url("NeueHaasUnica-ExtraBoldItalic.woff") format("woff"), url("NeueHaasUnica-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-Italic.eot");
+  src: local("Neue Haas Unica Italic"), local("NeueHaasUnica-Italic"), url("NeueHaasUnica-Italic.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-Italic.woff2") format("woff2"), url("NeueHaasUnica-Italic.woff") format("woff"), url("NeueHaasUnica-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-Light.eot");
+  src: local("Neue Haas Unica Light"), local("NeueHaasUnica-Light"), url("NeueHaasUnica-Light.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-Light.woff2") format("woff2"), url("NeueHaasUnica-Light.woff") format("woff"), url("NeueHaasUnica-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-ExtLtIta.eot");
+  src: local("Neue Haas Unica ExtLt Ita"), local("NeueHaasUnica-ExtLtIta"), url("NeueHaasUnica-ExtLtIta.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-ExtLtIta.woff2") format("woff2"), url("NeueHaasUnica-ExtLtIta.woff") format("woff"), url("NeueHaasUnica-ExtLtIta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-Bold.eot");
+  src: local("Neue Haas Unica Bold"), local("NeueHaasUnica-Bold"), url("NeueHaasUnica-Bold.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-Bold.woff2") format("woff2"), url("NeueHaasUnica-Bold.woff") format("woff"), url("NeueHaasUnica-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-ThinItalic.eot");
+  src: local("Neue Haas Unica Thin Italic"), local("NeueHaasUnica-ThinItalic"), url("NeueHaasUnica-ThinItalic.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-ThinItalic.woff2") format("woff2"), url("NeueHaasUnica-ThinItalic.woff") format("woff"), url("NeueHaasUnica-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-LightItalic.eot");
+  src: local("Neue Haas Unica Light Italic"), local("NeueHaasUnica-LightItalic"), url("NeueHaasUnica-LightItalic.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-LightItalic.woff2") format("woff2"), url("NeueHaasUnica-LightItalic.woff") format("woff"), url("NeueHaasUnica-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("NeueHaasUnica-ExtraLight.eot");
+  src: local("Neue Haas Unica Extra Light"), local("NeueHaasUnica-ExtraLight"), url("NeueHaasUnica-ExtraLight.eot?#iefix") format("embedded-opentype"), url("NeueHaasUnica-ExtraLight.woff2") format("woff2"), url("NeueHaasUnica-ExtraLight.woff") format("woff"), url("NeueHaasUnica-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("./font/NeueHaasUnica-Regular.eot");
+  src: local("Neue Haas Unica Regular"), local("NeueHaasUnica-Regular"), url("./font/NeueHaasUnica-Regular.eot?#iefix") format("embedded-opentype"), url("./font/NeueHaasUnica-Regular.woff2") format("woff2"), url("./font/NeueHaasUnica-Regular.woff") format("woff"), url("./font/NeueHaasUnica-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --white-color: rgb(242, 247, 238);
+  --green-color: rgb(196, 215, 179);
+  --black-text: rgb(23, 33, 18);
+  --white-text: rgb(243, 247, 238);
+  --rounded-border: 8px;
+}
+
+body {
+  font-family: "Neue Haas Unica";
+  font-weight: normal;
+  font-style: normal;
+  color: var(--black-text);
+  font-size: 12px;
+  background-color: var(--white-color);
+}
+
+p, a {
+  font-size: clamp(18px, 1.8wv, 20px);
+}
+
+.content-wrapper {
+  width: 100%;
+  padding: 0.8rem;
+  height: auto;
+}
+
+.transparet {
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+.wrapper {
+  width: min(100% - 1rem, 1920px);
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0.8rem;
+  height: auto;
+}
+@media (max-width: 1440px) {
+  .wrapper {
+    width: min(100% - 1rem, 1440px);
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    width: min(100% - 1rem, 768px);
+  }
+}
+@media (max-width: 500px) {
+  .wrapper {
+    width: min(100% - 1rem, 500px);
+  }
+}
+@media (max-width: 393px) {
+  .wrapper {
+    width: min(100% - 1rem, 393px);
+  }
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 6.25rem;
+  width: 100%;
+  padding: 0.8rem;
+  height: auto;
+}
+
+.top {
+  width: 100%;
+  height: 371px;
+  margin-bottom: 3.2rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .top {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+  }
+}
+.top-left {
+  width: 682px;
+  height: 371px;
+  background-color: var(--white-color);
+  border-radius: var(--rounded border);
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.top-left .top-left--content {
+  padding: 0.6rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+}
+.top-left .top-left-left {
+  display: flex;
+  flex-direction: column;
+}
+.top-left .black-btn {
+  width: 100px;
+  height: 38px;
+  padding: 8px 16px;
+  margin: 24px;
+  color: var(--white-text);
+  background-color: var(--black-text);
+  border-radius: var(--rounded border);
+  text-align: center;
+}
+.top-left h2 {
+  text-align: left;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.3;
+}
+.top-left p {
+  text-align: left;
+  margin-bottom: 1.2rem;
+  text-wrap: pretty;
+}
+.top-left img {
+  margin-bottom: 1.2rem;
+}
+.top-left .top-left-wine {
+  padding: 0.2rem;
+}
+.top-left .wine-title {
+  background-color: var(--green-color);
+  width: 337px;
+  height: 181px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.top-left .wine-title-title--item {
+  text-align: center;
+  width: 100%;
+}
+.top-left .wine-title-picture {
+  display: block;
+  margin-inline: auto;
+  width: 337px;
+  height: 120px;
+}
+.top-left .wine-title-picture--item {
+  max-width: 100%;
+}
+.top-right {
+  width: 682px;
+  height: 371px;
+  background-color: var(--green-color);
+  border-radius: var(--rounded);
+}
+
+.salad-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.salad-text--title {
+  font-size: 30px;
+  line-height: 100%;
+  font-weight: bold;
+  width: 166px;
+  height: 2rem;
+  text-wrap: balance;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.salad-text--paragraph {
+  text-wrap: pretty;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.salad-text--link {
+  text-align: center;
+  color: var(--black-text);
+  margin-inline: auto;
+  display: block;
+}
+
+.bottom {
+  width: 100%;
+  height: 371px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .bottom {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+  }
+}
+.bottom-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 682px;
+  height: 371px;
+  background-image: url("https://res.cloudinary.com/dwvi5ctsp/image/upload/t_bento_landscape/food/rasf09dw4matib5itw35.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bottom .bottom-title {
+  margin-left: 1.4rem;
+}
+.bottom .bottom-title--item {
+  font-size: 52px;
+  text-wrap: balance;
+  color: var(--white-text);
+  text-align: left;
+  width: 100%;
+}
+.bottom .bottom-subtitle {
+  margin-left: 1.4rem;
+}
+.bottom .bottom-subtitle--item {
+  color: var(--white-text);
+  text-wrap: balance;
+  width: 100%;
+  text-align: left;
+}
+.bottom-right {
+  width: 682px;
+  height: 371px;
+  background-color: var(--green-color);
+  border-radius: var(--rounded);
+  border: none;
+}
+.bottom .bottom-right--content {
+  width: 682px;
+  height: 371px;
+}
+.bottom .cafe {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.bottom .cafe-title {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: var(--rounded);
+  border: none;
+  background-color: var(--white-text);
+}
+.bottom .cafe-title--title {
+  margin-bottom: 2rem;
+  text-align: center;
+  text-wrap: balance;
+}
+.bottom .cafe-title--subtitle {
+  margin-bottom: 2rem;
+  text-align: center;
+  text-wrap: pretty;
+}
+.bottom .cafe-pictures {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  gap: 2rem;
+}
+.bottom .cafe-pictures--item {
+  max-width: 100%;
+  width: 164px;
+  height: 168px;
+}/*# sourceMappingURL=style.css.map */
